@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - MA03 - Question 1</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+var obj
+dbParam = JSON.stringify(obj);
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    for (var list in myObj.video) {
+        console.log("ID: " + myObj.video[list].id)
+        console.log("Name: " +myObj.video[list].name)
+        console.log("URL: " +myObj.video[list].url)
+        for (var author in myObj.video[list].author.data) {
+            console.log("Author: " +myObj.video[list].author.data[author].name_author)
+            console.log("Author URL: " + myObj.video[list].author.data[author].url)
+            console.log("Author type: " + myObj.video[list].author.data[author].type)
+        }
+    }
+  }
+};
+xmlhttp.open("GET", "https://raw.githubusercontent.com/NoroffFEU/javascript-ma3/master/level1/question2/author.json", true);
+xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xmlhttp.send("x=" + dbParam);
+
+</script>
+
+</html>

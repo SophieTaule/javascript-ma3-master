@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="form.js"></script>	
+    <title>JavaScript - MA03 - Question 1</title>
+</head>
+<body>
+
+<!--Contact Form-->
+
+ 
+  
+<ul style="list-style-type:none;"><div class="form">
+
+
+
+	<li><form action="/action_page.php" method="get">
+	<label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="First name.."></li>
+
+    <li><label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Last name.."></li>
+
+    <li><label for="lname">Phonenumber</label>
+    <input type="text" id="phonenumber" name="number" placeholder="Phone Number"></li>
+    <li><label for="lname">Email</label>
+    <input type="text" id="emailadress" name="email" placeholder="Email adress"></li>
+ <br>
+   <li>  <input id="clickMe" type="button" value="clickme" onclick="validateInfo(document.getElementById('emailadress') ,document.getElementById('phonenumber'),document.getElementById('fname'),document.getElementById('lname'))"/></li>
+    </ul>
+    
+
+
+  </form>
+</div>
+
+
+
+</body>
+
+
+</html>
